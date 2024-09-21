@@ -1,5 +1,5 @@
 # filter() 
-: find()는 단 1개의 true 값을 찾는 메서드라면, filter()는 조건에 맞는 요소 전체를 담은 배열을 반환. 
+: find()는 단 1개의 true 값을 찾는 메서드라면, filter()는 조건에 맞는 `true`인 요소만을 담은 배열을 반환. 
 
 ```javascript
 let results = arr.filter(function(item, index, array) {
@@ -30,3 +30,4 @@ const filteredArray = array.filter(Boolean);
 console.log(filteredArray); 
 // 출력: [1, 2, 3, 'hello']
 ```
+- filter(Boolean)에서 Boolean은 인자를 불리언 값으로 변환하는 `콜백함수`의 역할. 
