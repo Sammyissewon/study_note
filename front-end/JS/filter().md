@@ -19,3 +19,14 @@ let someUsers = users.filter(item => item.id < 3);
 
 alert(someUsers.length); // 2
 ```
+
+- filter(Boolean): 배열의 각 요소를 Boolean으로 변환 후, true인 값만 남겨두고, false인 값은 제거.
+```javascript
+const array = [0, 1, false, 2, '', 3, null, 'hello', undefined, NaN];
+
+// `filter(Boolean)` 적용
+const filteredArray = array.filter(Boolean);
+
+console.log(filteredArray); 
+// 출력: [1, 2, 3, 'hello']
+```
