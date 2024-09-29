@@ -34,7 +34,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    // URL의 id 값과 일치하는 제품 찾기
+    // URL의 id 값과 일치하는 제품 찾기.
     const foundProduct = products.find((product) => product.id === id);
     setProduct(foundProduct);
   }, [id]);
