@@ -6,32 +6,27 @@
 ## CompareFunction
 
 ```jsx
-function compareNumbers(a, b) {
-  return a - b;
-}
-```
-
-- `a - b`의 결과가 음수면 `a`가 `b`보다 앞에 배치됩니다. 됐음
-- `a - b`의 결과가 양수면 `b`가 `a`보다 앞에 배치됩니다.
-- `a - b`가 `0`이면 순서가 변경되지 않습니다.
-
-```jsx
-// 1
 const fruits = ["grape", "apple", "banana", "orange"];
 fruits.sort();
 console.log(fruits);
+//['apple', 'banana', 'grape', 'orange']
 
-// 2
+
+
 const numbers1 = [15, 3, 9, 1, 20];
 numbers1.sort((a, b) => a - b);
 console.log(numbers1);
+//[1, 3, 9, 15, 20]
 
-// 3
+
+
 const numbers2 = [42, 7, 13, 98, 55];
 numbers2.sort((a, b) => b - a);
 console.log(numbers2);
+//[98, 55, 42, 13, 7]
 
-// 4
+
+
 const people = [
   { name: "John", age: 25 },
   { name: "Jane", age: 22 },
@@ -39,13 +34,19 @@ const people = [
 ];
 people.sort((a, b) => a.age - b.age);
 console.log(people);
+// [{name: 'Jane', age: 22},
+// {name: 'John', age: 25},
+// {name: 'Mike', age: 30}]
 
-// 5
+
+
 const animals = ["elephant", "cat", "giraffe", "dog", "hippopotamus"];
 animals.sort((a, b) => a.length - b.length);
 console.log(animals);
+//['cat', 'dog', 'giraffe', 'elephant', 'hippopotamus']
 
-// 6
+
+
 const products = [
   { name: "Laptop", price: 1000 },
   { name: "Phone", price: 800 },
@@ -53,20 +54,33 @@ const products = [
   { name: "Monitor", price: 600 },
 ];
 
-// 7
 products.sort((a, b) => {
   if (a.price === b.price) {
     return a.name.localeCompare(b.name);
   }
   return a.price - b.price;
 });
-console.log(products);
 
-// 8
+console.log(products);
+// [{name: 'Monitor', price: 600},
+// {name: 'Tablet', price: 600},
+// {name: 'Phone', price: 800},
+// {name: 'Laptop', price: 1000}]
+
+
+
 const dates = ["2023-05-15", "2021-08-02", "2022-12-25", "2020-01-01"];
 dates.sort((a, b) => {
   return new Date(a) - new Date(b);
 });
 console.log(dates);
+//['2020-01-01', '2021-08-02', '2022-12-25', '2023-05-15']
+
+
+
+const str = "The quick brown fox jumps over the lazy dog.";
+const words = str.split();
+console.log(words);
+//['The quick brown fox jumps over the lazy dog.']
 
 ```
